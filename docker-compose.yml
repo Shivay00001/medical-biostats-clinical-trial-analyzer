@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  biostats-analyzer:
+    build: .
+    volumes:
+      - ./output:/app/output
+    command: [ "--input", "data/trial_data.csv" ]

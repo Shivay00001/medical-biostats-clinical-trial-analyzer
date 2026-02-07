@@ -1,0 +1,9 @@
+patient_id,group,efficacy_score,days,event
+P001,Treatment,85.2,120,0
+P002,Treatment,88.5,150,1
+P003,Placebo,62.1,90,1
+P004,Placebo,65.8,110,1
+P005,Treatment,92.0,180,0
+P006,Placebo,58.5,70,1
+P007,Treatment,89.1,160,0
+P008,Placebo,61.4,100,1
