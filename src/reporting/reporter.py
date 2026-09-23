@@ -8,9 +8,12 @@ class ClinicalReporter:
         """Generates and saves survival curves."""
         plt.figure(figsize=(10, 6))
         for label, data in survival_data.items():
-            times = list(data.keys())
-            probs = [v[label] for v in data.values()]
-            plt.step(times, probs, label=label)
+            # survival_function_.to_dict() nests as {label: {time: prob}};
+            # also accept a flat {time: prob} mapping.
+            series = data.get(label, data) if isinstance(data, dict) else data
+            times = list(series.keys())
+            probs = list(series.values())
+            plt.step(times, probs, label=label, where="post")
             
         plt.title("Kaplan-Meier Survival Curves")
         plt.xlabel("Days")

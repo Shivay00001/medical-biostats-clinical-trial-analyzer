@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 def main():
     parser = argparse.ArgumentParser(description="Medical Biostats Clinical Trial Analyzer")
     parser.add_argument("--input", default="data/trial_data.csv", help="Input CSV data")
-    parser.add_PH_argument("--output_report", default="output/summary.json", help="Output JSON report")
+    parser.add_argument("--output_report", default="output/summary.json", help="Output JSON report")
     parser.add_argument("--output_plot", default="output/survival_curve.png", help="Output PNG plot")
 
     args = parser.parse_args()
